@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practical #7</title>
+    <style>
+        div{
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div:nth-child(odd){
+            background-color:darksalmon;
+        }
+        div:nth-child(even){
+            background-color:aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Practical #7 :Craete a webage to implement form events. Part I</h2>
+    <hr>
+    <h2><b><u>Mouse Events :</u></b></h2> 
+   
+    <div onmouseup="mouseUp()" class="div1">mouse Up</div>
+    <div onmousedown="mouseDown()" class="div2">mouse down</div>
+    <div onclick="Click()" class="div3">click</div>
+    <div ondblclick="dblClick()" class="div4">double click</div>
+    <div onmouseenter="mouseEnter()" class="div5">Enter</div>
+    <div onmouseleave="mouseLeave()" class="div6">leave</div>
+    
+</body>
+<script>
+    function mouseUp(){alert("mouse up is pressed")}
+    function mouseDown(){alert("mouse down is pressed")}
+    function Click(){alert("div is pressed")}
+    function dblClick(){alert("div is double pressed")}
+    function mouseEnter(){alert("mouse is entered")}
+    function mouseLeave(){alert("Mouse is leaved")}
+</script>
+</html>

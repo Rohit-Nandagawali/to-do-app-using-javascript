@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practical #13</title>
+
+</head>
+<style>
+    center{
+        background-color: antiquewhite;
+        margin: 5vw 30vw;
+        padding: 10px;
+        border-radius: 20px;
+        font-family: Verdana, sans-serif;
+        cursor: pointer;
+    }
+    img{
+        border-radius: 20px;
+    }
+</style>
+<body>
+    <center>       
+        <div class="division" onmouseover="display()" onmouseleave="out()">
+            <img src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="car_Image">
+            <h2>Car</h2>
+            <h4>This is Car image.</h4>
+         </div>
+    </center>
+</body>
+<script>
+    var image=document.querySelector("img")
+    var heading=document.querySelector("h2")
+    var description=document.querySelector("h4")
+
+    function display() {
+        image.src="https://images.pexels.com/photos/60909/rose-yellow-flower-petals-60909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+
+        heading.innerHTML = "Flower"
+
+        description.innerHTML = "This is a beautiful flower"
+    }
+    function out() {
+        image.src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+
+        heading.innerHTML = "Car"
+
+        description.innerHTML = "This is a wonderful car"
+    }
+</script>
+</html>

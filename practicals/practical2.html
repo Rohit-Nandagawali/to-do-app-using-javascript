@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practical #2</title>
+</head>
+<body>
+    <h2>Practical #2 : Develop a javascript to use decision making and looping statements.</h2>
+    <hr>
+    <h3>Enter Password
+    
+    </h3>
+    <button onclick="isEligible()">Check here to Know</button>
+
+    <h3>Print the table of any number</h3>
+    <button onclick="displayTable()">Get the Table</button>
+    
+</body>
+
+<script>
+    function isEligible(){
+        var age  = parseInt(prompt("Enter your Current Age"))
+
+        // using if else
+        if(age > 18){
+            alert("Congractulations! You are eligible to get Vaccinated")
+        }
+        else if(age >=0 && age < 18){  
+            alert("currently you are not eligible to get Vaccinated")
+        }
+        else if(age == 18){
+            alert("Congractulations! You are now eligible to get Vaccinated")
+        }
+
+       
+        
+    }
+    function displayTable(){
+        var number  = parseInt(prompt("Enter number"))
+        var counter=1
+        var elements
+        var numberArray=[]
+        
+        // using loop
+        while (counter<11) {
+            elements = number*counter
+            numberArray[counter]=elements
+            counter++
+        }
+        var table =numberArray.toString()
+        alert("Table of "+"number ->"+table)
+    }
+</script>
+
+</html>

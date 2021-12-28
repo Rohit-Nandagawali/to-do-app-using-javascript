@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practical #3</title>
+</head>
+<body>
+    <h2>Practical #3 : Develop a javascript to implement Array functionalities.</h2>
+    <hr>
+    <h3>Print the table of any number</h3>
+    <button onclick="displayTable()">Get the Table</button>
+
+    
+</body>
+<script>
+    function displayTable(){
+        var number  = parseInt(prompt("Enter number"))
+        var counter=1
+        var elements
+
+        // declaring empty array
+        var numberArray=[]
+        
+        // using loop
+        while (counter<11) {
+            elements = number*counter
+            // storing array elements
+            numberArray[counter]=number +" x "+counter+" = "+elements+"\n"
+            counter++
+        }
+        // converting array to the string to display
+        var table =numberArray.toString()
+        alert("Table of "+number+" : "+"\n"+table)
+    }
+</script>
+</html>

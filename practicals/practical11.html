@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practical #11</title>
+</head>
+<body>
+    <h2>Practical #11 : Develop a webpage for placing a window on the screen and working with the child window.</h2>
+    <hr>
+    <button onclick="create_child()">Create Window</button>
+    <button onclick="move_child()">Move Window</button>
+    <button onclick="resize_child()">Resize Window</button>
+    <button onclick="close_child()">close Window</button>
+</body>
+<script>
+    var child_window
+    function create_child(){
+        child_window=window.open("","rating","width=10,heigth=0,left=150,right=200")
+        child_window.resizeTo(200,200)
+        
+
+    }
+    function close_child(){
+        child_window.close()
+    }
+    function move_child(){
+        child_window.moveTo(500,400)
+    }
+    function resize_child(){
+        var width = prompt("Enter width")
+        var height = prompt("Enter height")
+        child_window.resizeTo(width,height)
+    }
+</script>
+</html>

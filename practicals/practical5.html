@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practical #5</title>
+</head>
+<body>
+    <h2>Practical #5 : Develop a javascript to implement Strings.</h2>
+    <hr>
+    <h3>Play with your name</h3>
+    <div class="buttons">
+        <button onclick="getName()" style="background-color:crimson;color:white;margin-bottom: 10px;">Click here to enter your name</button><br>
+        <button onclick="numInName()">number of letters in your name</button>
+        <button onclick="lower()">Lowercase your name</button>
+        <button onclick="upper()">uppercase your name</button>
+        <button onclick="searchInName()">search letter in your name</button>
+    </div>
+    
+</body>
+<script>
+    var name;
+    function getName(){
+       name =  prompt("Input your name")
+    }
+    function numInName(){
+        alert("There are \""+name.length+"\" letters in your name")
+    }
+    function lower() {
+        alert(name.toLowerCase())        
+    }
+    function upper() {
+        alert(name.toUpperCase())  
+    }
+    function searchInName(){
+        var s = prompt("Enter what you want to search in your name")
+        alert("\""+s+"\" is present at "+(name.search(s)+1)+" index")
+    }
+
+</script>
+</html>

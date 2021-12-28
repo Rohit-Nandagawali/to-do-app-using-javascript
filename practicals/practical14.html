@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practical #14</title>
+</head>
+<body>
+    <center>
+        <h1>Practical #14:Create a webpage for implementing Menus</h1>
+        <br><br>
+       <form name="selection_form">
+        <select name="Years" onchange="getSubjects(this)">
+            <option value="0">First Year</option>
+            <option value="1">Second Year</option>
+            <option value="2">Third Year</option>
+        </select>
+        <select name="Subjects" style="display: none;" id="s1">
+            <option value="0">Subjects</option>
+        </select>
+       </form>
+    </center>
+</body>
+<script>
+    var first_yr =['C Programming','Basic Electronics','M-1','M-2']
+    var second_yr =['C++','DBMS','Data Structure','Java']
+    var third_yr =['Advanced Java','JavaScript','Python','Android']
+    var subjects =document.selection_form.Subjects
+
+
+
+    function getSubjects(yearselected) {
+
+        subjects.style.display="inline-block";
+
+        // clear current options
+       for(var i=subjects.options.length-1;i>0;i--){
+        document.selection_form.Subjects.options.remove(i)
+       }
+
+    //    year has the index of selected index of year example: first year=0
+       var year = yearselected.options[yearselected.selectedIndex].value
+
+    //    if year is selected then go inside
+       if(year!=""){
+        //    if first year is selected
+           if(year=="0"){
+            //    adding options
+               for(var i=1;i<first_yr.length+1;i++){
+                   subjects.options[i] =new Option(first_yr[i-1])
+               }
+           }
+        //    if second year is selected
+           if(year=="1"){
+               for(var i=1;i<second_yr.length;i++){
+                   subjects.options[i] =new Option(second_yr[i-1])
+               }
+           }
+        //    if second year is selected
+           if(year=="2"){
+            //    for(var i=1;i<third_yr.length+1;i++){
+            //        subjects.options[i] =new Option(third_yr[i-1])
+            //    }
+            window.open()
+           }
+       }
+    }
+
+</script>
+</html>

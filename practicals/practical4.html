@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practical #4</title>
+</head>
+<body>
+    <h2>Practical #4 : Develop a javascript to implement functions.</h2>
+    <hr>
+    <h3>Birthday wishes Generator</h3>
+    <button onclick="greet()">click me to generate birthday wishes for your friend</button>
+
+    
+</body>
+<script>
+
+    // declaring a function
+    function greetFriend(fname) {
+
+        // array containing wishes
+        var wishes =["Happy Birthday, "+fname+" Hope all your wishes come true 💕❤","Happy Birthday!  "+fname+" I hope you have a great day today!  Enjoy your beautiful day "+fname+"😉","Happy Birthday "+fname+"! May God bless you with lots of love, happiness and success.😉"]
+
+        // this will generator random index number and return wish in string format
+        return wishes[Math.floor(Math.random()*wishes.length)]
+
+        
+    }
+    
+
+// a function calling another function
+    function greet() {
+
+        // taking input name of friend
+        var name = prompt("Enter your friend's name")
+        // calling greetFriend function and giving argument and storing it into 'wish'
+        var wish = greetFriend(name)
+
+        // displaying wish
+        alert(wish)
+       
+    }
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <title>Practical 1</title>
+</head>
+<body>
+    <h2>Practical #1 : Write simple javascript with HTML for arithmetic expression evaluation and message printing</h2>
+   
+    <hr>
+    <h3>click the respected button to perform Arithmethic operations</h3>
+
+    <div class="buttons">
+        <button onclick="addition()">Addition</button>
+        <button onclick="subtraction()">Subtraction</button>
+        <button onclick="division()">Division</button>
+        <button onclick="multiplication()">Multiplication</button>
+        <button onclick="modulus()">Modulus</button>
+    </div>
+    
+</body>
+<script>
+    function addition(){
+        var Firstnumber=parseInt(prompt("Please enter First number"))
+        var Secondnumber=parseInt(prompt("Please enter second number"))
+        var addition = Firstnumber+Secondnumber
+        alert(Firstnumber + " + "+Secondnumber +" = "+addition)
+
+    }
+    function subtraction(){
+        var Firstnumber=parseInt(prompt("Please enter First number"))
+        var Secondnumber=parseInt(prompt("Please enter second number"))
+        var subtraction = Firstnumber-Secondnumber
+        alert(Firstnumber + " - "+Secondnumber +" = "+subtraction)
+
+    }
+    function division(){
+        var Firstnumber=parseInt(prompt("Please enter First number"))
+        var Secondnumber=parseInt(prompt("Please enter second number"))
+        var division = Firstnumber/Secondnumber
+        alert(Firstnumber + " / "+Secondnumber +" = "+division)
+
+    }
+    function multiplication(){
+        var Firstnumber=parseInt(prompt("Please enter First number"))
+        var Secondnumber=parseInt(prompt("Please enter second number"))
+        var multiplication = Firstnumber*Secondnumber
+        alert(Firstnumber + " x "+Secondnumber +" = "+multiplication)
+
+    }
+    function modulus(){
+        var Firstnumber=parseInt(prompt("Please enter First number"))
+        var Secondnumber=parseInt(prompt("Please enter second number"))
+        var modulus = Firstnumber%Secondnumber
+        alert(Firstnumber + " % "+Secondnumber +" = "+modulus)
+
+    }
+</script>
+</html>

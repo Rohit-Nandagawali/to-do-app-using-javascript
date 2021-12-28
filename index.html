@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Project</title>
+    <style>
+        .container {
+        width:180px;
+        height:120px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 4px 12px 30px rgba(0, 0, 0, 0.06);
+        border: 1px solid rgb(78, 77, 77);
+        padding: 20px;
+        }
+        select{
+            padding: 8px 12px;
+            color: #333333;
+            background-color: #eeeeee;
+            border: 1px solid #dddddd;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Select from below</h1>
+        <div class="container">
+            <form name="selection_form">
+                <select  onchange="getlinks(this.value)">
+                    <option disabled selected>Select from below</option>
+                    <option value="/project/inde2.html">Microproject</option>
+                    <option value="/practicals/practical1.html">practical1</option>
+                    <option value="/practicals/practical2.html">practical2</option>
+                    <option value="/practicals/practical3.html">practical3</option>
+                    <option value="/practicals/practical4.html">practical4</option>
+                    <option value="/practicals/practical5.html">practical5</option>
+                    <option value="/practicals/practical6.html">practical6</option>
+                    <option value="/practicals/practical7.html">practical7</option>
+                    <option value="/practicals/practical8.html">practical8</option>
+                    <option value="/practicals/practical9.html">practical9</option>
+                    <option value="/practicals/practical10.html">practical10</option>
+                    <option value="/practicals/practical11.html">practical11</option>
+                    <option value="/practicals/practical12.html">practical12</option>
+                    <option value="/practicals/practical13.html">practical13</option>
+                    <option value="/practicals/practical14.html">practical14</option>
+                    <option value="/practicals/practical15.html">practical15</option>
+                    <option value="/practicals/practical16.html">practical16</option>
+                    
+                </select>
+               </form>
+        </div>        
+    </center>
+    
+</body>
+<script>
+    function getlinks(src) {
+        window.location=src
+    }
+</script>
+</html>

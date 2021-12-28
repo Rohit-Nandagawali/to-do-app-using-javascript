@@ -1,0 +1,65 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Practical #12</title>
+    <style>
+        input:invalid{border-color:red;}
+	input:valid{border-color:green;}
+
+    </style>
+</head>
+<body>
+    <h2>Practical #12 : Develop a webpage for validation of form fields using regular expressions.</h2>
+    <hr>
+    <label>Name:</label><br>
+    <input id="name" type="text" pattern="[A-Z]*[a-z]*.?\s?"><br><br>
+    <label>Phone Number:</label><br>
+    <input id="number" type="text"  pattern="[0-9]{10}"><br><br>
+    <label>Address:</label><br>
+    <textarea id="address" pattern="[A-Z]*[a-z]*.?\s?"></textarea><br>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+
+<head>
+    <script>
+        function validate()
+        {
+            var pass = document.getElementById("pass").value;
+            var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+            var mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[AZ])(?=.*[0-9])))(?=.{6,})");
+            if(strongRegex.test(pass))
+            {
+            document.getElementById("e").innerText =" Strong Password ";
+            }
+            else if(mediumRegex.test(pass))
+            {
+            document.getElementById("e").innerText =" Medium Password ";
+            }
+            else
+            {
+            document.getElementById("e").innerText =" Weak Password ";
+            }
+        }
+ </script>
+</head>
+
+<body>
+    <center>
+        <h1>CSS : Practical No 12</h1>
+        <h2>Develop a webpage for validation of form fields using "Regular Expression"</h2>
+        <br><br>
+    </center>
+    <form>
+        <fieldset>
+            <legend> Regular Expression Demo </legend><br><br>
+            Enter Password: <input type="password" id="pass" onkeyup="validate()">
+            <p id="e"> </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>

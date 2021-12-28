@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practical #16</title>
+</head>
+<body onload="rotate()">
+    <center>
+        <a href="javscript: linkBanner()">
+            <img style="border-radius: 20px;" src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"  width="700" height="500" name="img1" >
+        </a>
+        <h2>Practical #16:Develop a webpage for implementing Slideshow, Banner</h2>
+        <h3>Click on Banner to visit website</h3>
+    </center>
+</body>
+<script>
+
+    fb="https://image.freepik.com/free-vector/3d-facebook-background-banner_8499-1248.jpg"
+
+    tweet="https://image.freepik.com/free-vector/3d-twitter-background-banner_8499-1249.jpg"
+
+    insta ="https://image.freepik.com/free-vector/3d-instagram-background-banner_8499-1247.jpg"
+
+    linkdin="https://img.freepik.com/free-vector/3d-linkedin-background-banner_8499-1252.jpg?size=626&ext=jpg"
+
+    google="https://image.freepik.com/free-photo/3d-rendering-icon-logo-google-realistic_337293-83.jpg"
+
+    banners=[fb,insta,google,tweet,linkdin]
+
+    bannerLinks=['https://facebook.com/','https://instagram.com/','https://google.com/','https://twitter.com/','https://linkedin.com/']
+
+    count=0
+
+    function linkBanner(){
+        document.location.href=bannerLinks[count]
+    }
+    function rotate() {
+        if (document.images) {
+            count++
+            if(count==banners.length){
+                count=0
+            }
+            document.img1.src=banners[count]
+            setTimeout("rotate()",4000)
+        }
+        
+    }
+</script>
+</html>
